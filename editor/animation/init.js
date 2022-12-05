@@ -1,11 +1,6 @@
-requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
-    function (extIO, $, TableComponent) {
-        var io = new extIO({
-            functions: {
-                js: 'flatList',
-                python: 'flat_list'
-            }
-        });
+requirejs(['ext_editor_io2', 'jquery_190'],
+    function (extIO, $) {
+        var io = new extIO({});
         io.start();
     }
 );

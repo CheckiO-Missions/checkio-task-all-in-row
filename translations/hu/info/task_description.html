@@ -23,34 +23,23 @@
 
 <p><strong>Bemeneti adatok:</strong> egész számokból (int) álló egymásba ágyazott lista (list)</p>
 
-<p><strong>Kimeneti adatok:</strong> egy egydimenziós egész számokból (int) álló lista (list).</p>
+<p><strong>Kimeneti adatok:</strong> {% if is_js %}Array of numbers{% else %}List or another Iterable (tuple, generator, iterator) of integers{% endif %}.</p>
 
 <p><strong>Példák:<br/></strong></p>
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: python">flatList([1, 2, 3]) == [1, 2, 3]
-flatList([1, [2, 2, 2], 4]) == [1, 2, 2, 2, 4]
-flatList([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7]
-flatList([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1]
-</pre>
-
-{% else %}
-<pre class="brush: python">flat_list([1, 2, 3]) == [1, 2, 3]
-flat_list([1, [2, 2, 2], 4]) == [1, 2, 2, 2, 4]
-flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7]
-flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1]
-</pre>
-
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
 <p class="for_info_only">
-    <strong>Alkalmazása: </strong>
-    Az itt használt alapelv hasznos lehet bonyolult szerkezetű állományok 
+    <strong>Alkalmazása:</strong>
+    <i>Az itt használt alapelv hasznos lehet bonyolult szerkezetű állományok 
     feldolgozásánál és elemzésénél, valamint kreativitást igénylő programozási 
-    vetélkedő feladatainál, ahol kitétel a programkód rövidsége.
+    vetélkedő feladatainál, ahol kitétel a programkód rövidsége.</i>
 </p>
 
 <p>
-    <strong>Előfeltételek: </strong><br> 0 &le; |array| &le; 100<br>
-    &forall; x ∈ a tömbnek : -2<sup>32</sup> < x < 2<sup>32</sup> vagy az x - az egy lista<br>
-    mélység < 10
+    <strong>Előfeltételek:</strong>
+    <ul>
+        <li>0 &le; |array| &le; 100;</li>
+        <li>&forall; x ∈ a tömbnek : -2<sup>32</sup> < x < 2<sup>32</sup> vagy az x - az egy lista;</li>
+        <li>mélység < 10.</li>
+    </ul>
 </p>
