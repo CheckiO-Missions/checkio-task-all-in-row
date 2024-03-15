@@ -1,0 +1,48 @@
+<img class="for_info_only half" src="{{MEDIA}}title.png" style="float:left;max-height: 400px">
+<p>
+    Nicola kategorisiert gerne alle möglichen Dinge.
+    Er kategorisierte eine Reihe von Zahlen und das Ergebnis seiner Bemühungen,
+    wurde aus einer einfachen Zahlenfolge eine tief verschachtelte Liste.
+    Sophia und Stephan verstehen seine Organisation nicht wirklich und müssen herausfinden, was das alles bedeutet.
+    Sie brauchen Ihre Hilfe, um Nikolas verrückte Liste zu verstehen.
+</p>
+<p>
+    Es gibt eine Liste, die ganze Zahlen enthält oder
+    andere verschachtelte Listen, die noch mehr Listen und ganze Zahlen enthalten können, die dann... Sie verstehen schon.
+    Sie sollten alle Integer-Werte in eine flache Liste packen.
+    Die Reihenfolge sollte so sein, wie sie in der ursprünglichen Liste mit der String-Darstellung von links nach rechts war.
+</p>
+
+<p>
+    Wir müssen dieses Programm vor Nikola verstecken, indem wir es klein und einfach zu verstecken halten.
+    Aus diesem Grund <strong>sollte Ihr Code kürzer als 140 Zeichen sein (mit Leerzeichen)</strong>.
+</p>
+
+<p>
+   <strong>Eingabe:</strong> Ein verschachteltes {% if is_js %}Array mit Zahlen{% else %}Liste mit ganzen Zahlen{% endif %}.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> {% if is_js %}Array von Zahlen{% else %}Liste oder ein anderes Iterable (Tupel, Generator, Iterator) von ganzen Zahlen{% endif %}.
+</p>
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<p class="for_info_only">
+    <strong>Wie es verwendet wird:</strong>
+    <i>Dieses Konzept ist nützlich für das Parsen und Analysieren von Dateien mit komplexen Strukturen und
+    die Aufgabe fordert Ihre Kreativität beim Schreiben von kurzem Code heraus.</i>
+</p>
+
+<p>
+    <strong>Vorbedingungen:</strong>
+    <ul>
+        <li>0 &le; |array| &le; 100;</li>
+        <li>&forall; x ∈ array: <sup>-232</sup> &lt; x &lt;<sup>232</sup> oder x ist eine Liste;</li>
+        <li>tiefe &lt; 10.</li>
+    </ul>
+</p>
